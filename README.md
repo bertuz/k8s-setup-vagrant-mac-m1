@@ -1,11 +1,11 @@
 # Kodekloud's ARM solution for kubernetes
 
-This repo is a starting point for the [https://github.com/kodekloudhub/certified-kubernetes-administrator-course](certified kubernetes administrator course) with an Apple Silicon.
+This repo is a starting point for the [certified kubernetes administrator course](https://github.com/kodekloudhub/certified-kubernetes-administrator-course) with an Apple Silicon.
 I made it work a cluster from scratch, although it differs slightly from the solution provided on kodekloud. Maybe some little editing is needed to make it work on your Mac.
 
-The original idea on which is based, and the topology it sets up, is the one described [https://gist.github.com/max-i-mil/f44e8e6f2416d88055fc2d0f36c6173b](here), but the setup differs: I don't use libvirt, but qemu along with vagrant's qemu-plugin.
+The original idea on which is based, and the topology it sets up, is the one described [here](https://gist.github.com/max-i-mil/f44e8e6f2416d88055fc2d0f36c6173b), but the setup differs: I don't use libvirt, but qemu along with vagrant's qemu-plugin.
 
-![topology](https://assets.digitalocean.com/articles/alligator/boo.svg)
+![topology](https://user-images.githubusercontent.com/36989775/200905266-136cc6df-9b1d-44ae-8a57-35b97035934e.png)
 
 ## A word about Weave
 The initial setup used weave, at least in the first kubernetes' lecture. But it didn't work. So I switched to flannel in my own setup. Read more below on the steps.
