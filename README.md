@@ -5,7 +5,7 @@ I made it work a cluster from scratch, although it differs slightly from the sol
 
 The original idea on which is based, and the topology it sets up, is the one described [https://gist.github.com/max-i-mil/f44e8e6f2416d88055fc2d0f36c6173b](here), but the setup differs: I don't use libvirt, but qemu along with vagrant's qemu-plugin.
 
-![topology](https://assets.digitalocean.com/articles/alligator/boo.svg "topology")
+![topology](https://assets.digitalocean.com/articles/alligator/boo.svg)
 
 ## A word about Weave
 The initial setup used weave, at least in the first kubernetes' lecture. But it didn't work. So I switched to flannel in my own setup. Read more below on the steps.
