@@ -18,6 +18,19 @@ The steps must be considered just a guide,  my own steps to make it work, not th
 I've added some scripts to add all the nodes on each `/etc/hosts`, enable the interface you should use to make them communicate on the vnet, and acquire the expected IP.
 I don't know if this setup will work on your machine, so feel free to change the IPs defaults to make it work. Again, this is my very own solution and it's not intended to be world-proof 😅.
 
+## Vagrant plugin needed
+This solution does not use virtualbox, since the ARM beta is out but its stability is quite shaky (it doesn't work well at least on my mac).
+Qemu though is a quite good virtualizer/emulating tool, after all Docker uses it. Actually, we adopt it by telling to use the built-in MacOs' Hypervisor.framework, which allows 
+bridged networks at ease.
+
+```
+vagrant plugin install vagrant-qemu
+```
+
+## A word to use vagrant
+Since we're using the Hypervisor.framework, we must have root privileges to run our stuff, otherwise the networking won't be working.
+Remember to `sudo vagrant` your commands!
+
 ## Steps
 ```
 #docker
